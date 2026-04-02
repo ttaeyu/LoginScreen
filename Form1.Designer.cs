@@ -37,6 +37,7 @@
             // btnLogin
             // 
             btnLogin.Font = new Font("맑은 고딕", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            btnLogin.ForeColor = Color.Red;
             btnLogin.Location = new Point(80, 353);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(211, 82);
