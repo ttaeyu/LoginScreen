@@ -32,6 +32,7 @@
             lblAppName = new Label();
             txtID = new TextBox();
             txtPW = new TextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnLogin
@@ -41,7 +42,7 @@
             btnLogin.Location = new Point(80, 353);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(211, 82);
-            btnLogin.TabIndex = 0;
+            btnLogin.TabIndex = 1;
             btnLogin.Text = "로그인";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += button1_Click;
@@ -53,7 +54,7 @@
             lblAppName.Location = new Point(80, 9);
             lblAppName.Name = "lblAppName";
             lblAppName.Size = new Size(198, 86);
-            lblAppName.TabIndex = 1;
+            lblAppName.TabIndex = 0;
             lblAppName.Text = "Login";
             lblAppName.Click += label1_Click;
             // 
@@ -68,6 +69,7 @@
             txtID.Text = "아이디";
             txtID.TextChanged += textBox1_TextChanged;
             txtID.Enter += txtID_Enter;
+            txtID.KeyDown += txtID_KeyDown;
             txtID.Leave += txtID_Leave;
             // 
             // txtPW
@@ -80,13 +82,25 @@
             txtPW.TabIndex = 3;
             txtPW.Text = "패스워드";
             txtPW.Enter += txtPW_Enter;
+            txtPW.KeyDown += txtPW_KeyDown;
             txtPW.Leave += txtPW_Leave;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(303, 80);
+            label1.Name = "label1";
+            label1.Size = new Size(39, 15);
+            label1.TabIndex = 4;
+            label1.Text = "label1";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(397, 447);
+            Controls.Add(label1);
             Controls.Add(txtPW);
             Controls.Add(txtID);
             Controls.Add(lblAppName);
@@ -103,5 +117,6 @@
         private Label lblAppName;
         private TextBox txtID;
         private TextBox txtPW;
+        private Label label1;
     }
 }

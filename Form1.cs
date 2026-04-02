@@ -27,12 +27,12 @@ namespace LoginScreen
             string inputPW = txtPW.Text;
             if (inputID == myID && inputPW == myPW)
             {
-                MessageBox.Show( "로그인 성공");
+                MessageBox.Show("로그인 성공");
             }
             else
             {
                 // 틀리면 가차 없이 쫓아내부러야제!
-                MessageBox.Show( "로그인 실패");
+                MessageBox.Show("로그인 실패");
             }
         }
 
@@ -72,6 +72,30 @@ namespace LoginScreen
                 txtPW.ForeColor = Color.Gray;
                 txtPW.UseSystemPasswordChar = false;
             }
+        }
+
+        private void txtID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPW.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtPW_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                btnLogin.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
