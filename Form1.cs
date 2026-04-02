@@ -27,12 +27,20 @@ namespace LoginScreen
             string inputPW = txtPW.Text;
             if (inputID == myID && inputPW == myPW)
             {
-                MessageBox.Show("로그인 성공");
+                
+                lblErrorMsg.Visible = false;
+
+               
+                lblErrorMsg.Text = "로그인 성공";
+                lblErrorMsg.ForeColor = Color.Blue; 
+                lblErrorMsg.Visible = true;
             }
             else
             {
-                // 틀리면 가차 없이 쫓아내부러야제!
-                MessageBox.Show("로그인 실패");
+
+                lblErrorMsg.Text = "아이디또는비밀번호가 잘못되었습니다.";
+                lblErrorMsg.ForeColor = Color.Red; 
+                lblErrorMsg.Visible = true; 
             }
         }
 
